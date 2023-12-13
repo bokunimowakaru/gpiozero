@@ -15,5 +15,5 @@ Ben Nuttall 氏とDave Jones氏が開発したラズベリー・パイ用のGPIO
 by Wataru KUNINO 2023
 -------------------------------------------------------------------------------------------
 ## 参考文献
-https://www.raspberrypi.com/documentation/computers/raspberry-pi-5.html#raspberry-pi-and-gpio(https://www.raspberrypi.com/documentation/computers/raspberry-pi-5.html#raspberry-pi-and-gpio)  
-https://gpiozero.readthedocs.io/(https://gpiozero.readthedocs.io/)  
+[https://www.raspberrypi.com/documentation/computers/raspberry-pi-5.html#raspberry-pi-and-gpio](https://www.raspberrypi.com/documentation/computers/raspberry-pi-5.html#raspberry-pi-and-gpio)  
+[https://gpiozero.readthedocs.io/](https://gpiozero.readthedocs.io/)  
