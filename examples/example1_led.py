@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 ###############################################################################
-# Example 11 Lチカ BASIC [GPIO Zero 版]
+# Example 1 Lチカ BASIC [GPIO Zero 版]
 ###############################################################################
 #
 # 参考文献：
-# https://github.com/bokunimowakaru/iot/blob/master/learning/example11_led_basic.py
+# https://bokunimo.net/git/iot/blob/master/learning/example11_led_basic.py
 # https://gpiozero.readthedocs.io/
 #
 #                   Copyright (c) 2019-2023 Wataru KUNINO https://bokunimo.net/
 ###############################################################################
 
-port = 4                                # GPIO ポート番号
+port = 4                                # GPIO ポート番号 = 4 (7番ピン)
 b = 0                                   # GPIO 出力値
 
 from gpiozero import LED                # GPIO Zero モジュールの取得
@@ -21,7 +21,7 @@ print(argv[0])                          # プログラム名を表示する
 if len(argv) >= 2:                      # 引数があるとき
     port = int(argv[1])                 # GPIOポート番号をportへ
 
-led = LED(port)                         # ポート番号portのGPIOを出力に設定
+led = LED(port)                         # ポート番号portをLED出力に設定
 
 while True:                             # 繰り返し処理
     b = int(not(b))                     # 変数bの値を論理反転

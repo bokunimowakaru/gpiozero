@@ -1,8 +1,16 @@
 #!/usr/bin/env python3
-# coding: utf-8
-# Example 11 Lチカ
+###############################################################################
+# Example 1 Lチカ BASIC [RPi.GPIO 版]
+###############################################################################
+#
+# 参考文献：
+# https://bokunimo.net/git/iot/blob/master/learning/example11_led_basic.py
+# https://gpiozero.readthedocs.io/
+#
+#                   Copyright (c) 2019-2023 Wataru KUNINO https://bokunimo.net/
+###############################################################################
 
-port = 4                               # GPIO ポート番号 = 27 (13番ピン)
+port = 4                                # GPIO ポート番号 = 4 (7番ピン)
 
 from RPi import GPIO                    # ライブラリRPi内のGPIOモジュールの取得
 from time import sleep                  # スリープ実行モジュールの取得
@@ -23,5 +31,5 @@ try:                                    # キー割り込みの監視を開始
         sleep(0.5)                      # 0.5秒間の待ち時間処理
 except KeyboardInterrupt:               # キー割り込み発生時
     print('\nKeyboardInterrupt')        # キーボード割り込み表示
-    GPIO.cleanup(port)                  # GPIOを未使用状態に戻す
-    exit()
+GPIO.cleanup(port)                      # GPIOを未使用状態に戻す
+exit()                                  # プログラムの終了
