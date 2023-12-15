@@ -30,7 +30,6 @@ from RPi import GPIO                            # GPIOモジュールの取得
 from time import sleep                          # スリープ実行モジュールの取得
 from sys import argv                            # 本プログラムの引数argvを取得
 import urllib.request                           # HTTP通信ライブラリを組み込む
-import json                                     # JSON変換ライブラリを組み込む
 
 url_s = 'https://notify-api.line.me/api/notify' # アクセス先
 head_dict = {'Authorization':'Bearer ' + line_token,

@@ -28,17 +28,15 @@ line_token='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 port = 17                                       # GPIO ポート番号=17 (11番ピン)
 
 from gpiozero import Button                     # GPIO Zero のButtonを取得
-from time import sleep                          # スリープ実行モジュールの取得
 from signal import pause                        # シグナル待ち受けの取得
 from sys import argv                            # 本プログラムの引数argvを取得
 import urllib.request                           # HTTP通信ライブラリを組み込む
-import json                                     # JSON変換ライブラリを組み込む
 
 url_s = 'https://notify-api.line.me/api/notify' # アクセス先
 head_dict = {'Authorization':'Bearer ' + line_token,
              'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8'}
 
-def toLine(body):                               # LINEへメッセージを送信する
+def toLine(body = 'ボタンが押されました'):      # LINEへメッセージを送信する
     print(head_dict)                            # 送信ヘッダhead_dictを表示
     print(body)                                 # 送信内容bodyを表示
     post = urllib.request.Request(url_s, body.encode(), head_dict)
@@ -58,5 +56,6 @@ print(argv[0])                                  # プログラム名を表示す
 if len(argv) >= 2:                              # 引数があるとき
     port = int(argv[1])                         # 整数としてportへ代入
 btn = Button(port)                              # ポート番号portをボタン入力に
-btn.when_pressed = toLine('ボタンが押されました') # ボタンにLINE送信を割り当て
+
+btn.when_pressed = toLine                       # ボタンにLINE送信を割り当て
 pause()                                         # 待ち受け待機する(永久ループ)
