@@ -9,7 +9,7 @@
 #                   Copyright (c) 2019-2023 Wataru KUNINO https://bokunimo.net/
 ###############################################################################
 
-port = 17                                       # GPIO ポート番号=17 (11番ピン)
+port = 26                                       # GPIO ポート番号=26(37番ピン)
 
 from RPi import GPIO                            # GPIOモジュールの取得
 from time import sleep                          # スリープ実行モジュールの取得

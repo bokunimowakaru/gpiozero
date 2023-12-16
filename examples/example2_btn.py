@@ -28,7 +28,7 @@
 line_token='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
                                                 # ↑ここにLINEのTOKENを入力
 
-port = 17                                       # GPIO ポート番号=17 (11番ピン)
+port = 26                                       # GPIO ポート番号=26(37番ピン)
 
 from gpiozero import Button                     # GPIO Zero のButtonを取得
 from signal import pause                        # シグナル待ち受けの取得

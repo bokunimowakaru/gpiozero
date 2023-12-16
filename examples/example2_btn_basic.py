@@ -13,7 +13,7 @@
 #                   Copyright (c) 2019-2023 Wataru KUNINO https://bokunimo.net/
 ###############################################################################
 
-port = 17                                       # GPIO ポート番号=17 (11番ピン)
+port = 26                                       # GPIO ポート番号=26(37番ピン)
 
 from gpiozero import Button                     # GPIO Zero のButtonを取得
 from signal import pause                        # シグナル待ち受けの取得
