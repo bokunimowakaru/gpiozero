@@ -6,7 +6,7 @@
 # 輝度0～9をRGBの各色に設定することができます。
 #
 # 本HTTPサーバへのアクセス方法(例)：
-# http://127.0.0.1:8080/?R=3&G=6&B=8
+# http://127.0.0.1:8080/?R=8&G=4&B=1
 #
 # 最新版：
 # https://bokunimo.net/git/gpiozero/blob/master/examples/example4_led3.py
@@ -49,7 +49,7 @@ def wsgi_app(environ, start_response):          # HTTPアクセス受信時の�
     return [ok]                                 # 応答メッセージを返却
 
 led3 = RGBLED(red=ports[0], green=ports[1], blue=ports[2]) # RGB LED led3を生成
-led3.color = color                              # 輝度50%で RGBの全てを点灯
+led3.color = color                              # 初期カラーを出力
 
 httpd = make_server('', 8080, wsgi_app)         # ポート8080でHTTPサーバ実体化
 print("HTTP port 8080")                         # 起動ポート番号の表示

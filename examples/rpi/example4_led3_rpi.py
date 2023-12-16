@@ -6,7 +6,7 @@
 # 輝度0～9をRGBの各色に設定することができます。
 #
 # 本HTTPサーバへのアクセス方法(例)：
-# http://127.0.0.1:8080/?R=3&G=6&B=8
+# http://127.0.0.1:8080/?R=8&G=4&B=1
 #
 # 最新版：
 # https://bokunimo.net/git/gpiozero/blob/master/examples/example4_led3.py
