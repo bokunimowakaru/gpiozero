@@ -3,6 +3,9 @@
 # Example 1 Lチカ BASIC [GPIO Zero 版]
 ###############################################################################
 #
+# 最新版：
+# https://bokunimo.net/git/gpiozero/blob/master/examples/example1_led.py
+#
 # 参考文献：
 # https://bokunimo.net/git/iot/blob/master/learning/example11_led_basic.py
 # https://gpiozero.readthedocs.io/

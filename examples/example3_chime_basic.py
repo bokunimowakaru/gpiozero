@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 ###############################################################################
-# Example 2 チャイム [GPIO Zero 版]
+# Example 3 チャイム BASIC [GPIO Zero 版]
 ###############################################################################
+#
+# 最新版：
+# https://bokunimo.net/git/gpiozero/blob/master/examples/example3_chime_basic.py
 #
 # 参考文献：
 # https://bokunimo.net/git/iot/blob/master/learning/example13_chime.py

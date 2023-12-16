@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 ###############################################################################
-# Example 3 ボタン [GPIO Zero 版] [HTTPクライアント搭載]
+# Example 2 ボタン [GPIO Zero 版] [IoT対応：HTTPクライアント搭載]
 ###############################################################################
+#
+# 最新版：
+# https://bokunimo.net/git/gpiozero/blob/master/examples/example2_btn.py
 #
 # 参考文献：
 # https://bokunimo.net/git/iot/blob/master/learning/example14_iot_btn.py

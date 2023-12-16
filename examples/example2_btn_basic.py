@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 ###############################################################################
-# Example 3 ボタン [GPIO Zero 版]
+# Example 2 ボタン BASIC [GPIO Zero 版]
 ###############################################################################
+#
+# 最新版：
+# https://bokunimo.net/git/gpiozero/blob/master/examples/example2_btn_basic.py
 #
 # 参考文献：
 # https://bokunimo.net/git/iot/blob/master/learning/example14_btn.py
