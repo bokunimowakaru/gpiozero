@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 ###############################################################################
-# Example 3 ボタン [RPi.GPIO版] [HTTPクライアント搭載]
+# Example 2 ボタン [RPi.GPIO版] [HTTPクライアント搭載]
 ###############################################################################
 #
 # 参考文献：
@@ -35,7 +35,7 @@ url_s = 'https://notify-api.line.me/api/notify' # アクセス先
 head_dict = {'Authorization':'Bearer ' + line_token,
              'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8'}
 
-def toLine(body):                               # LINEへメッセージを送信する
+def toLine(body='ボタンが押されました'):        # LINEへメッセージを送信する
     print(head_dict)                            # 送信ヘッダhead_dictを表示
     print(body)                                 # 送信内容bodyを表示
     post = urllib.request.Request(url_s, body.encode(), head_dict)
@@ -66,7 +66,7 @@ try:                                            # キー割り込みの監視を
         while b == 0:                           # ボタンが押されている間
             sleep(0.1)                          # 0.1秒間の待ち時間処理
             b = GPIO.input(port)                # GPIO入力値を変数bへ代入
-        toLine('ボタンが押されました')          # LINE送信
+        toLine()                                # LINE送信
 except KeyboardInterrupt:                       # キー割り込み発生時
     print('\nKeyboardInterrupt')                # キーボード割り込み表示
 GPIO.cleanup(port)                              # GPIOを未使用状態に戻す
