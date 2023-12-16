@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 ###############################################################################
 # Example 4 フルカラー Lチカ [GPIO Zero 版] [IoT対応：HTTPサーバ搭載]
+#
+#                   Copyright (c) 2019-2023 Wataru KUNINO https://bokunimo.net/
 ###############################################################################
 #
 # 輝度0～9をRGBの各色に設定することができます。
@@ -14,8 +16,6 @@
 # 参考文献：
 # https://bokunimo.net/git/iot/blob/master/learning/example19_iot_ledpwm.py
 # https://gpiozero.readthedocs.io/
-#
-#                   Copyright (c) 2019-2023 Wataru KUNINO https://bokunimo.net/
 ###############################################################################
 
 port_R = 17                                     # 赤色LED用 GPIO ポート番号

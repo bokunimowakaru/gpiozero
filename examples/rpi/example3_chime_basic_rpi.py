@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 ###############################################################################
 # Example 3 チャイム [RPi.GPIO版]
+#                   Copyright (c) 2019-2023 Wataru KUNINO https://bokunimo.net/
 ###############################################################################
 #
 # 参考文献：
 # https://bokunimo.net/git/iot/blob/master/learning/example13_chime.py
 #
-#                   Copyright (c) 2019-2023 Wataru KUNINO https://bokunimo.net/
 ###############################################################################
 
 port = 4                                # チャイム用 GPIO ポート番号

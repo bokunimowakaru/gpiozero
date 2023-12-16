@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 ###############################################################################
 # Example 2 ボタン [RPi.GPIO版]
+#
+#                   Copyright (c) 2019-2023 Wataru KUNINO https://bokunimo.net/
 ###############################################################################
 #
 # 参考文献：
 # https://bokunimo.net/git/iot/blob/master/learning/example14_btn.py
-#
-#                   Copyright (c) 2019-2023 Wataru KUNINO https://bokunimo.net/
 ###############################################################################
 
 port = 26                                       # GPIO ポート番号=26(37番ピン)

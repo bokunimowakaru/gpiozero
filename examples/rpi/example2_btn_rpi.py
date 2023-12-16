@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 ###############################################################################
 # Example 2 ボタン [RPi.GPIO版] [HTTPクライアント搭載]
+#
+#                   Copyright (c) 2019-2023 Wataru KUNINO https://bokunimo.net/
 ###############################################################################
 #
 # 参考文献：
 # https://bokunimo.net/git/iot/blob/master/learning/example14_iot_btn.py
 # https://bokunimo.net/git/iot/blob/master/learning/example09_LINE.py
-#
-#                   Copyright (c) 2019-2023 Wataru KUNINO https://bokunimo.net/
 ###############################################################################
 '''
  ※LINE アカウントと LINE Notify 用のトークンが必要です。

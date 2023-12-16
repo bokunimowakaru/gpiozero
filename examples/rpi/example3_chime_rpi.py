@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 ###############################################################################
 # Example 3 チャイム [RPi.GPIO版] [HTTPサーバ搭載]
+#
+#                   Copyright (c) 2019-2023 Wataru KUNINO https://bokunimo.net/
 ###############################################################################
 #
 # 参考文献：
 # https://bokunimo.net/git/iot/blob/master/learning/example13_chime.py
 # https://bokunimo.net/git/iot/blob/master/learning/example18_iot_chime_n.py
-#
-#                   Copyright (c) 2019-2023 Wataru KUNINO https://bokunimo.net/
 ###############################################################################
 
 port = 4                                        # GPIO ポート番号 = 4 (7番ピン)
