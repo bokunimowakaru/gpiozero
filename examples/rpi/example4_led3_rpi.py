@@ -1,7 +1,12 @@
 #!/usr/bin/env python3
 ###############################################################################
-# Example 4 フルカラー Lチカ BASIC [IoT対応：HTTPサーバ搭載]
+# Example 4 フルカラー Lチカ [RPi.GPIO版] [IoT対応：HTTPサーバ搭載]
 ###############################################################################
+#
+# 輝度0～9をRGBの各色に設定することができます。
+#
+# 本HTTPサーバへのアクセス方法(例)：
+# http://127.0.0.1:8080/?R=3&G=6&B=8
 #
 # 最新版：
 # https://bokunimo.net/git/gpiozero/blob/master/examples/example4_led3.py
@@ -31,6 +36,7 @@ def wsgi_app(environ, start_response):          # HTTPアクセス受信時の�
         start_response(error,[('Content-type','text/plain; charset=utf-8')])
         return [(error+'\r\n').encode('utf-8')] # 応答メッセージを返却
     query = environ.get('QUERY_STRING')         # 変数queryにHTTPクエリを代入
+    query = parse_qs(query)                     # 辞書型に変換
     keys = ['R','G','B']                        # Query内の検索キーをkeysへ代入
     for i in range( len(keys) ):                # 検索キーのindexを変数iへ
         val = query.get(keys[i])                # キーを検索して値を取得する
