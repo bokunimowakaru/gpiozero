@@ -15,7 +15,7 @@
 ###############################################################################
 '''
  ※LINE アカウントと LINE Notify 用のトークンが必要です。
-    1. https://notify-bot.line.me/ へアクセス
+    1. https://notify-bot.line.me/ へアクセスしてログインする
     2. 右上のアカウントメニューから「マイページ」を選択
     3. アクセストークンの発行で「トークンを発行する」を選択
     4. トークン名「raspi」（任意）を入力
@@ -41,6 +41,7 @@ head_dict = {'Authorization':'Bearer ' + line_token,
 
 def toLine(body='ボタンが押されました'):        # LINEへメッセージを送信する
     print(head_dict)                            # 送信ヘッダhead_dictを表示
+    body = 'message='+body                      # 送信するbody(message=)を作成
     print(body)                                 # 送信内容bodyを表示
     post = urllib.request.Request(url_s, body.encode(), head_dict)
     try:                                        # 例外処理の監視を開始
