@@ -19,13 +19,13 @@ from gpiozero import Button                     # GPIO Zero のButtonを取得
 from signal import pause                        # シグナル待ち受けの取得
 from sys import argv                            # 本プログラムの引数argvを取得
 
-def pressed(body = 'ボタンが押されました'):     # ボタンが押された時の処理
+def pressed(body='ボタンが押されました'):       # ボタン押下時の処理の定義
     print(body)                                 # メッセージを表示
 
 print(argv[0])                                  # プログラム名を表示する
 if len(argv) >= 2:                              # 引数があるとき
     port = int(argv[1])                         # 整数としてportへ代入
-btn = Button(port)                              # ポート番号portをボタン入力に
+btn = Button(port, bounce_time=0.1)             # ポート番号portをボタン入力に
 
 btn.when_pressed = pressed                      # ボタンに関数pressedを割り当て
 pause()                                         # 待ち受け待機する(永久ループ)
