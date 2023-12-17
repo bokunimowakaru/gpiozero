@@ -14,6 +14,7 @@
 # pi@raspberrypi:~/gpiozero/examples $ ./example4_led3.py & # HTTPサーバ起動
 # [1] 5086
 # HTTP port 8080
+#
 # pi@raspberrypi:~/gpiozero/examples $ ./example4_led3_sender.py # 送信機起動
 # Usage: ./example4_led3_sender.py [temperature]
 # CPU Temperature = 48.0
