@@ -11,6 +11,9 @@
 # pi@raspberrypi:~/gpiozero/examples $ ./example4_led3_tone.py 60     # 黄50%
 # pi@raspberrypi:~/gpiozero/examples $ ./example4_led3_tone.py 120    # 緑50%
 # pi@raspberrypi:~/gpiozero/examples $ ./example4_led3_tone.py 240 10 # 青10%
+#
+# 参考文献：
+# https://gpiozero.readthedocs.io/
 
 port_R = 17                                     # 赤色LED用 GPIO ポート番号
 port_G = 27                                     # 緑色LED用 GPIO ポート番号
@@ -23,7 +26,7 @@ from gpiozero import RGBLED                     # RGB LEDモジュールの取�
 from time import sleep                          # スリープ実行モジュールの取得
 from sys import argv                            # 本プログラムの引数argvを取得
 
-def tone2rgb(tone_color=0, brightness=0.5):
+def tone2rgb(tone_color=0, brightness=0.5):     # ToDo colorzeroに置き換えれるはず
     v = brightness
     if v > 1:
         v = 1.0
@@ -48,16 +51,15 @@ def tone2rgb(tone_color=0, brightness=0.5):
         rgb = [v, 0, q]                         # case 5: r=v; g=0; b=q; break;
     return rgb
 
-
 print('Usage:',argv[0],'[color [brightness]]')  # プログラム名を表示する
 led3 = RGBLED(red=ports[0], green=ports[1], blue=ports[2]) # RGB LED led3を生成
 
 tone_color = None
 brightness = 0.5
 if len(argv) >= 2:                              # 引数があるとき
-    tone_color = int(argv[1])                   # GPIOポート番号をportへ
-if len(argv) >= 3:                              # 引数があるとき
-    brightness = int(argv[2])/100               # GPIOポート番号をportへ
+    tone_color = int(argv[1])
+if len(argv) >= 3:                              # 引数が2つあるとき
+    brightness = int(argv[2])/100
 if tone_color is not None:
     led3.color = tone2rgb(tone_color,brightness)
     sleep(5)
