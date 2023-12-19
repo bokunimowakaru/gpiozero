@@ -51,10 +51,7 @@ def toLine(body='ボタンが押されました'):        # LINEへメッセー�
         return                                  # 処理の中断
     res_str = res.read().decode()               # 受信テキストを変数res_strへ
     res.close()                                 # HTTPアクセスの終了
-    if len(res_str):                            # 受信テキストがあれば
-        print('Response:', res_str)             # 変数res_strの内容を表示
-    else:                                       # 受信テキストが無いとき
-        print('Done')                           # Doneを表示
+    print('Response:', res_str)                 # 変数res_strの内容を表示
 
 print(argv[0])                                  # プログラム名を表示する
 if len(argv) >= 2:                              # 引数があるとき
