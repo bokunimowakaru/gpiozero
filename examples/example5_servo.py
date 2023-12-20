@@ -101,7 +101,7 @@ def wsgi_app(environ, start_response):          # HTTPアクセス受信時の�
 
 def httpd():                                    # HTTPサーバ用スレッド
     htserv = make_server('', 8080, wsgi_app)    # HTTPサーバ実体化
-    print('HTTP port', port)                    # ポート番号を表示
+    print('HTTP port', 8080)                    # ポート番号を表示
     try:                                        # 例外処理の監視
         htserv.serve_forever()                  # HTTPサーバを起動
     except KeyboardInterrupt as e:              # キー割り込み発生時
