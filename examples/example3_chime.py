@@ -27,11 +27,11 @@ import threading                                # スレッド用ライブラリ
 
 def chime():                                    # チャイム（スレッド用）
     mutex.acquire()                             # mutex状態に設定(排他処理開始)
-    pwm.play(Tone(ping_f))                      # PWM周波数の変更
+    buz.play(Tone(ping_f))                      # PWM周波数の変更
     sleep(0.5)                                  # 0.5秒の待ち時間処理
-    pwm.play(Tone(pong_f))                      # PWM周波数の変更
+    buz.play(Tone(pong_f))                      # PWM周波数の変更
     sleep(0.5)                                  # 0.5秒の待ち時間処理
-    pwm.stop()                                  # PWM出力停止
+    buz.stop()                                  # PWM出力停止
     mutex.release()                             # mutex状態の開放(排他処理終了)
 
 def wsgi_app(environ, start_response):          # HTTPアクセス受信時の処理
@@ -47,7 +47,7 @@ print(argv[0])                                  # プログラム名を表示す
 if len(argv) >= 2:                              # 引数があるとき
     port_chime = int(argv[1])                   # GPIOポート番号をport_chimeへ
 
-pwm = TonalBuzzer(port)                         # PWM出力用のインスタンスを生成
+buz = TonalBuzzer(port)                         # PWM出力用のインスタンスを生成
 mutex = threading.Lock()                        # 排他処理用のオブジェクト生成
 
 httpd = make_server('', 8080, wsgi_app)         # ポート8080でHTTPサーバ実体化
