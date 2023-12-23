@@ -19,8 +19,8 @@ from gpiozero import Button                     # GPIO Zero のButtonを取得
 from signal import pause                        # シグナル待ち受けの取得
 from sys import argv                            # 本プログラムの引数argvを取得
 
-def pressed(body='ボタンが押されました'):       # ボタン押下時の処理の定義
-    print(body)                                 # メッセージを表示
+def pressed():                                  # ボタン押下時の処理の定義
+    print('ボタンが押されました')               # メッセージを表示
 
 print(argv[0])                                  # プログラム名を表示する
 if len(argv) >= 2:                              # 引数があるとき
