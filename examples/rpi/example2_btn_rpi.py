@@ -35,9 +35,9 @@ url_s = 'https://notify-api.line.me/api/notify' # アクセス先
 head_dict = {'Authorization':'Bearer ' + line_token,
              'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8'}
 
-def toLine(body='ボタンが押されました'):        # LINEへメッセージを送信する
+def toLine():                                   # LINEへメッセージを送信する
     print(head_dict)                            # 送信ヘッダhead_dictを表示
-    body = 'message='+body                      # 送信するbody(message=)を作成
+    body = 'message=ボタンが押されました'       # 送信するbody(message=)を作成
     print(body)                                 # 送信内容bodyを表示
     post = urllib.request.Request(url_s, body.encode(), head_dict)
     try:                                        # 例外処理の監視を開始
