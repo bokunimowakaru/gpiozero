@@ -28,10 +28,10 @@
 # 終了するには[Ctrl]キーを押しながら[C]を押してください。
 
 port = 14                                       # GPIO ポート番号=14 (8番ピン)
-pwm_min = 3.0  / 100 * 0.020                    # 180°のときのPWM幅(秒)
-pwm_max = 11.8 / 100 * 0.020                    # 0°のときのPWM幅(秒)
-cover_closed_deg = 150                          # ケースが閉じているときの角度
-cover_opened_deg = 90                           # ケースが開いているときの角度
+pwm_min = 0.0005                                # -90°のときのPWM幅(秒)
+pwm_max = 0.0024                                # +90°のときのPWM幅(秒)
+cover_closed_deg = -60                          # ケースが閉じているときの角度
+cover_opened_deg =  0                           # ケースが開いているときの角度
 cover_status = 1                                # ケース状態の閉=0、開=1
 cover_deg = [cover_closed_deg,cover_opened_deg] # ケースの各状態の角度
 temp_emit_on = 60                               # 放熱をON(ケース開)する温度
@@ -46,10 +46,10 @@ import threading                                # スレッド管理を組み込
 def coverCtrl(cover):
     global port, pwm_min, pwm_max, cover_status # 各値を取得
     if cover != cover_status:                   # カバーの状態変化あり
-        deg = -(cover_deg[cover]-90)            # サーボの確度を計算
+        deg = cover_deg[cover]                  # サーボの角度を代入
         servo.angle = deg                       # 指示値に応じたPWMをサーボに出力
         sleep(0.5)                              # 回転の完了待ち
-        servo.detach()
+        servo.detach()                          # 制御の停止
         #del servo                              # サーボの停止
         cover_status = cover                    # 状態値を更新する
 
@@ -92,7 +92,6 @@ def wsgi_app(environ, start_response):          # HTTPアクセス受信時の�
     html += '<th width=200>グラフ</th>\n'       # 「グラフ」を表示
     html += barChart('CPU温度(℃)', temp, 80)   # 温度値を棒グラフ化
     html += barChart('ケース状態', cover_status, 1) 
-    html += barChart('サーボ角(°)', cover_deg[cover_status], 180)  # 角度を表示
     html += '</tr>\n</table>\n'                 # 作表の終了
     html += 'ケース制御 <a href="/?=0">閉じる</a> <a href="/?=1">開く</a>'
     html += '</body>\n</html>\n'                # htmlの終了

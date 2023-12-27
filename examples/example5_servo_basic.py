@@ -24,10 +24,11 @@
 # 終了するには[Ctrl]キーを押しながら[C]を押してください。
 
 port = 14                                   # GPIO ポート番号=14 (8番ピン)
-pwm_min = 3.0  / 100 * 0.020                # 180°のときのPWM幅(秒)
-pwm_max = 11.8 / 100 * 0.020                # 0°のときのPWM幅(秒)
+pwm_min = 0.0005                            # -90°のときのPWM幅(秒)
+pwm_max = 0.0024                            # +90°のときのPWM幅(秒)
 
 from gpiozero import AngularServo           # AngularServo モジュールの取得
+from time import sleep                      # スリープ実行モジュールの取得
 
 servo = AngularServo(port, min_pulse_width=pwm_min, max_pulse_width=pwm_max)
 
@@ -41,3 +42,5 @@ while True:                                 # 繰り返し処理
         continue                            # whileの先頭に戻る
     print('PWM('+str(port)+')=', deg)       # ポート番号と変数valを表示
     servo.angle = deg                       # 指示値に応じたPWMをサーボに出力
+    sleep(0.5)                              # 回転の完了待ち
+    servo.detach()                          # 制御の停止
