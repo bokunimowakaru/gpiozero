@@ -21,6 +21,7 @@
 # キーボードから入力した角度の位置に回転して合わせます。。
 # 回転時に約120mAの電流が流れます(電源5.2V, 無負荷, 実測値, ピーク電流除く)。
 # servo > のプロンプトが表示されたら角度-90～90を入力してください。
+# サーボモータの個体差によって-90度付近や90度付近では動作しないことがあります。
 # 終了するには[Ctrl]キーを押しながら[C]を押してください。
 
 port = 14                                   # GPIO ポート番号=14 (8番ピン)
@@ -29,6 +30,11 @@ pwm_max = 0.0024                            # +90°のときのPWM幅(秒)
 
 from gpiozero import AngularServo           # AngularServo モジュールの取得
 from time import sleep                      # スリープ実行モジュールの取得
+from sys import argv                        # 本プログラムの引数argvを取得
+
+print(argv[0])                              # プログラム名を表示する
+if len(argv) >= 2:                          # 引数があるとき
+    port = int(argv[1])                     # GPIOポート番号をportへ代入
 
 servo = AngularServo(port, min_pulse_width=pwm_min, max_pulse_width=pwm_max)
 
@@ -40,7 +46,7 @@ while True:                                 # 繰り返し処理
         continue                            # whileの先頭に戻る
     if deg < -90 or deg > 90:               # ±90度の範囲外のとき
         continue                            # whileの先頭に戻る
-    print('PWM('+str(port)+')=', deg)       # ポート番号と変数valを表示
+    print('PWM('+str(port)+')=', deg)       # ポート番号と変数degを表示
     servo.angle = deg                       # 指示値に応じたPWMをサーボに出力
     sleep(0.5)                              # 回転の完了待ち
     servo.detach()                          # 制御の停止

@@ -43,7 +43,7 @@ from gpiozero import AngularServo               # AngularServo モジュール�
 from time import sleep                          # スリープ実行モジュールの取得
 import threading                                # スレッド管理を組み込む
 
-def coverCtrl(cover):
+def coverCtrl(cover):                           # ケース上蓋を開閉制御する関数
     global port, pwm_min, pwm_max, cover_status # 各値を取得
     if cover != cover_status:                   # カバーの状態変化あり
         deg = cover_deg[cover]                  # サーボの角度を代入
@@ -53,7 +53,7 @@ def coverCtrl(cover):
         #del servo                              # サーボの停止
         cover_status = cover                    # 状態値を更新する
 
-def getTemp():
+def getTemp():                                  # CPUの温度値を取得する関数
     fp = open(filename)                         # CPU温度ファイルを開く
     temp = round(float(fp.read()) / 1000,1)     # ファイルを読み込み1000で除算
     fp.close()                                  # ファイルを閉じる
@@ -111,9 +111,24 @@ coverCtrl(0)                                    # カバーを閉じる
 thread = threading.Thread(target=httpd, daemon=True) # httpdの実体化
 thread.start()                                  # httpdの起動
 while thread.is_alive:                          # 永久ループ
+    sleep(30)                                   # 30秒間の待ち時間処理
     temp = getTemp()                            # 温度値を取得
     if temp >= temp_emit_on:                    # 放出温度に達した
         coverCtrl(1)                            # カバーを開く
     if temp <= temp_emit_off:                   # 放出停止温度以下
         coverCtrl(0)                            # カバーを閉じる
-    sleep(30)                                   # 30秒間の待ち時間処理
+
+'''
+動作の一例：
+pi@raspberrypi:~ $ cd␣~/gpiozero/examples⏎
+pi@raspberrypi:~/gpiozero/examples $ ./example5_servo.py
+/usr/lib/python3/dist-packages/gpiozero/output_devices.py:1509: PWMSoftwareFallback: To reduce servo jitter, use the pigpio pin factory.See https://gpiozero.readthedocs.io/en/stable/api_output.html#servo for more info
+  warnings.warn(PWMSoftwareFallback(
+HTTP port 8080
+CPU Temperature = 48.5
+127.0.0.1 - - [28/Dec/2023 09:16:17] "GET / HTTP/1.1" 200 513
+CPU Temperature = 48.5
+127.0.0.1 - - [28/Dec/2023 09:16:26] "GET /?=1 HTTP/1.1" 200 513
+CPU Temperature = 48.0
+CPU Temperature = 47.4
+'''
