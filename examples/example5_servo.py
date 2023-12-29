@@ -75,7 +75,7 @@ def barChart(name, val, max, color='green'):    # 棒グラフHTMLを作成す�
 def wsgi_app(environ, start_response):          # HTTPアクセス受信時の処理
     if environ.get('PATH_INFO') != '/':         # パスがルート以外のとき
         start_response('404 Not Found',[])      # 404エラー設定
-        return ['404 Not Foundt\r\n'.encode()]  # 応答メッセージ(404)を返却
+        return ['404 Not Found\r\n'.encode()]   # 応答メッセージ(404)を返却
     global cover_status                         # cover_statusの取得(Thread用)
     query = environ.get('QUERY_STRING')         # 変数queryにHTTPクエリを代入
     sp = query.find('=')                        # 変数query内の「=」を探す
