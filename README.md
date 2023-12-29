@@ -32,8 +32,11 @@ Ben Nuttall 氏とDave Jones氏が開発したラズベリー・パイ用のGPIO
 
 プログラムを停止するには[Ctrl]+[C]を押下する。  
 
+## 本プログラム集のウェブページ
 
-by Wataru KUNINO 2023 [https://bokunimo.net/](https://bokunimo.net/)
+[https://git.bokunimo.com/gpiozero/](https://git.bokunimo.com/gpiozero/)
+
+by Wataru KUNINO 2023-2024 [https://bokunimo.net/](https://bokunimo.net/)
 
 -------------------------------------------------------------------------------------------
 
