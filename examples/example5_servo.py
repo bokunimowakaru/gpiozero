@@ -30,7 +30,7 @@
 port = 14                                       # GPIO ポート番号=14 (8番ピン)
 pwm_min = 0.0005                                # -90°のときのPWM幅(秒)
 pwm_max = 0.0024                                # +90°のときのPWM幅(秒)
-cover_closed_deg = -60                          # ケースが閉じているときの角度
+cover_closed_deg = 60                           # ケースが閉じているときの角度
 cover_opened_deg =  0                           # ケースが開いているときの角度
 cover_status = 1                                # ケース状態の閉=0、開=1
 cover_deg = [cover_closed_deg,cover_opened_deg] # ケースの各状態の角度
