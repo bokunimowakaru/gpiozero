@@ -11,7 +11,7 @@ Raspberry Pi 5 model B （下図）の発売に合わせて登場したRaspberry
 
 ## GPIO Zeroとは
 
-GPIO Zeroは、一つ古いRaspberry Pi OS 11 Bullseyeから標準搭載されてました。しかし、これまではRPi.GPIOが利用できたため，あまり利用されていませんでした。
+GPIO Zeroは、一つ古いRaspberry Pi OS 11 BullseyeからRaspberry Pi用OSに標準搭載されてました。しかし、これまではRPi.GPIOが利用できたため，あまり利用されていませんでした。
 Raspberry Pi 5 ではRPi.GPIOが使用できなくなったので、今後はGPIO Zeroが主流になると思います。
 
 - Ben Nuttall 氏とDave Jones氏が開発したラズベリー・パイ用のGPIO制御モジュール（ライブラリ）
