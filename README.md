@@ -5,6 +5,8 @@
 Raspberry Pi 5 model Bの発売に合わせて登場したRaspberry Pi OS 12 Bookworm。  
 本OSに標準搭載されている最新のGPIO制御用モジュール「GPIO Zero」を試してみましょう。
 
+![Raspberry-Pi-5](https://bokunimo.net/blog/wp-content/uploads/2024/03/pi5_box.jpg "Raspberry Pi 5 model B; 最新のラズベリー・パイ5")  
+
 ## GPIO Zeroとは
 
 Ben Nuttall 氏とDave Jones氏が開発したラズベリー・パイ用のGPIO制御モジュール（ライブラリ）。
