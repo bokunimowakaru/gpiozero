@@ -4,15 +4,15 @@
 
 ## ラズパイ5入手前でも試せるGPIO Zero
 
-Raspberry Pi 5 model B （下図）の発売に合わせて登場したRaspberry Pi OS 12 Bookworm。  
+Raspberry Pi 5 model B （下図）の発売に合わせて登場した Raspberry Pi OS 12 Bookworm。  
 本OSに標準搭載されている最新のGPIO制御用モジュール「GPIO Zero」を試してみましょう。
 
 ![Raspberry-Pi-5](https://bokunimo.net/blog/wp-content/uploads/2024/03/pi5_box.jpg "Raspberry Pi 5 model B; 最新のラズベリー・パイ5")  
 
 ## GPIO Zeroとは
 
-GPIO Zeroは、一つ古いRaspberry Pi OS 11 BullseyeからRaspberry Pi用OSに標準搭載されてました。しかし、これまではRPi.GPIOが利用できたため，あまり利用されていませんでした。
-Raspberry Pi 5 ではRPi.GPIOが使用できなくなったので、今後はGPIO Zeroが主流になると思います。
+GPIO Zero は、一つ古い Raspberry Pi OS 11 Bullseye から Raspberry Pi用OSとして標準搭載されてました。しかし、これまでは RPi.GPIO が利用できたため、あまり利用されていませんでした。
+Raspberry Pi 5 では RPi.GPIO が使用できなくなったので、今後は GPIO Zero が主流になると思います。
 
 - Ben Nuttall 氏とDave Jones氏が開発したラズベリー・パイ用のGPIO制御モジュール（ライブラリ）
 - 各種の具体的なGPIOデバイスに応じたクラスや関数が用意されている
@@ -47,7 +47,13 @@ Raspberry Pi 5 ではRPi.GPIOが使用できなくなったので、今後はGPI
 ## 詳細な説明 #広告
 
 プログラムの使い方や解説は、雑誌「Interface 2024年5月号」にて紹介していますので、お買い求めいただければ幸いです。  
-[https://bokunimo.net/blog/raspberry-pi/4524/](https://bokunimo.net/blog/raspberry-pi/4524/)#広告  
+[https://bokunimo.net/blog/raspberry-pi/4524/](https://bokunimo.net/blog/raspberry-pi/4524/)  
+
+Interface 2024年5月号の詳細はこちら：  
+[https://interface.cqpub.co.jp/magazine/202405/](https://interface.cqpub.co.jp/magazine/202405/) #広告  
+
+Interface 2024年5月号のAmazonでの販売ページ：  
+[https://www.amazon.co.jp/dp/B0CXJKQRMC/](https://www.amazon.co.jp/dp/B0CXJKQRMC/) #広告(アフィリエイトはありません)
 
 ## 本プログラム集のウェブページ
 
