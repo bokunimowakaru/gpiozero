@@ -32,6 +32,11 @@ Ben Nuttall 氏とDave Jones氏が開発したラズベリー・パイ用のGPIO
 
 プログラムを停止するには[Ctrl]+[C]を押下する。  
 
+## 詳細な説明 #広告
+
+プログラムの使い方や解説は、雑誌「Interface 2024年5月号」にて紹介していますので、お買い求めいただければ幸いです。  
+[https://bokunimo.net/blog/raspberry-pi/4524/](https://bokunimo.net/blog/raspberry-pi/4524/)#広告  
+
 ## 本プログラム集のウェブページ
 
 [https://git.bokunimo.com/gpiozero/](https://git.bokunimo.com/gpiozero/)
