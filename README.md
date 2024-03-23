@@ -18,6 +18,14 @@ Ben Nuttall 氏とDave Jones氏が開発したラズベリー・パイ用のGPIO
 しかし，Raspberry Pi 4ではRPi.GPIOが利用できたため，あまり利用されていなかった。
 今回のRaspberry Pi 5の登場で，これからGPIO Zeroが主流になるだろう。
 
+## 本プログラム集でできること(一例)
+
+下図は本プログラム集の Example 5 を応用した製作品の一例です。サーボ・モータを使って、Raspberry Pi 5のケースの蓋の開閉を制御します。  
+
+![controlled_case_cap](https://bokunimo.net/blog/wp-content/uploads/2024/03/controlled_case_cap.jpg "Raspberry Pi 5 model B; 最新のラズベリー・パイ5")  
+[https://github.com/bokunimowakaru/gpiozero/blob/master/examples/example5_servo.py](https://github.com/bokunimowakaru/gpiozero/blob/master/examples/example5_servo.py)  
+
+
 ## GPIO Zero実験用ソフトウェア
 
 ラズベリー・パイ上のLXTerminalから下記のコマンドを入力してダウンロードする。  
