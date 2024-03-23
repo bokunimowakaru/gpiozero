@@ -44,9 +44,11 @@ Raspberry Pi 5 では RPi.GPIO が使用できなくなったので、今後は 
 
 プログラムを停止するには[Ctrl]+[C]を押下する。  
 
-## 詳細な説明 #広告
+## 詳細な説明 #広告あり
 
 プログラムの使い方や解説は、雑誌「Interface 2024年5月号」にて紹介していますので、お買い求めいただければ幸いです。  
+
+筆者ブログでの紹介：  
 [https://bokunimo.net/blog/raspberry-pi/4524/](https://bokunimo.net/blog/raspberry-pi/4524/)  
 
 Interface 2024年5月号の詳細はこちら：  
