@@ -1,5 +1,7 @@
 # GPIO ZeroでI/O制御プログラミング
 
+![Raspberry-Pi-5-GPIO](https://bokunimo.net/blog/wp-content/uploads/2024/03/pi5-gpio.jpg "GPIO Pins on Raspberry Pi 5 model B; ラズベリー・パイ5のGPIO端子")  
+
 ## ラズパイ5入手前でも試せるGPIO Zero
 
 Raspberry Pi 5 model Bの発売に合わせて登場したRaspberry Pi OS 12 Bookworm。  
